@@ -6,4 +6,12 @@ namespace technicalChallenge.Models
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
     }
+
+    public class NameModel
+    {
+        public string Name { get; set; }
+
+    }
+
+
 }

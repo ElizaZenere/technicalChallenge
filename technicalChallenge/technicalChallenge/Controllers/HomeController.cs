@@ -26,6 +26,20 @@ namespace technicalChallenge.Controllers
         {
             return View();
         }
+        public ActionResult ValidateName(NameModel model)
+        {
+                
+            if (model.Name == "hola")
+            {
+                ModelState.AddModelError("Name", "Es obligatorio el nombre.");
+                return View(model);
+            }
+                  
+            return View(model);
+                
+        }
+
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
